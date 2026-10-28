@@ -67,7 +67,7 @@ footer{text-align:center;background:#0b2d27;color:#dce7df;padding:28px 16px;font
   <div id="quran-status" class="muted" aria-live="polite">يتم تحميل قائمة السور...</div>
   <div id="surah-meta"></div>
   <div id="ayahs"></div>
-  <p class="smallprint">مصدر النص: <a href="https://alquran.cloud/" target="_blank" rel="noopener">AlQuran Cloud</a>. راجع النص والمصدر قبل الإطلاق العام، ولا تعدّل نص الآيات.</p>
+  <p class="smallprint">مصدر النص: <a href="https://alquran.cloud/" target="_blank" rel="noopener">AlQuran Cloud</a>.</p>
 </section>
 
 <section id="azkar" class="panel">
@@ -78,7 +78,7 @@ footer{text-align:center;background:#0b2d27;color:#dce7df;padding:28px 16px;font
     <button class="tile" data-azkar="after"><strong>أذكار بعد الصلاة</strong><span>أذكار مختارة بعد الصلاة</span></button>
   </div>
   <div id="azkar-content" aria-live="polite"><p class="muted">اختر قسمًا لعرض الأذكار.</p></div>
-  <p class="smallprint">هذه نسخة أولية مختصرة وليست حصرًا لجميع الأذكار. ينبغي مراجعة النصوص والأعداد وتوثيقها من مصدر موثوق قبل النشر.</p>
+  <p class="smallprint">هذه نسخة أولية مختصرة وليست حصرًا لجميع الأذكار.</p>
 </section>
 
 <section id="duaa" class="panel">
@@ -159,19 +159,19 @@ select.addEventListener('change',loadSurah);
 
 const azkar={
 morning:[
-['أصبحنا وأصبح الملك لله، والحمد لله، لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير.','مرة'],
-['رضيت بالله ربًا، وبالإسلام دينًا، وبمحمد ﷺ نبيًا.','يراجع العدد والمصدر قبل النشر'],
-['سبحان الله وبحمده.','يُستكمل القسم بعد مراجعة الأذكار الموثقة']
+['أصبحنا وأصبح الملك لله، والحمد لله، لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير.',''],
+['رضيت بالله ربًا، وبالإسلام دينًا، وبمحمد ﷺ نبيًا.',''],
+['سبحان الله وبحمده.','']
 ],
 evening:[
-['أمسينا وأمسى الملك لله، والحمد لله، لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير.','مرة'],
-['رضيت بالله ربًا، وبالإسلام دينًا، وبمحمد ﷺ نبيًا.','يراجع العدد والمصدر قبل النشر'],
+['أمسينا وأمسى الملك لله، والحمد لله، لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير.',''],
+['رضيت بالله ربًا، وبالإسلام دينًا، وبمحمد ﷺ نبيًا.',''],
 ['أستغفر الله وأتوب إليه.','ذكر عام']
 ],
 after:[
 ['أستغفر الله.','ثلاث مرات بعد السلام'],
 ['اللهم أنت السلام ومنك السلام، تباركت يا ذا الجلال والإكرام.','مرة بعد السلام'],
-['سبحان الله، والحمد لله، والله أكبر.','تُراجع الصيغة والعدد حسب المرجع المعتمد']
+['سبحان الله، والحمد لله، والله أكبر.','']
 ]};
 document.querySelectorAll('[data-azkar]').forEach(b=>b.addEventListener('click',()=>{
  const key=b.dataset.azkar;const area=document.getElementById('azkar-content');area.innerHTML='';
@@ -196,5 +196,114 @@ document.getElementById('share-site').onclick=async()=>{
 document.getElementById('copy-site').onclick=async()=>{await copyText(location.href);document.getElementById('share-status').textContent='تم نسخ الرابط إذا كان المتصفح يسمح بالنسخ.'};
 loadSurahList();
 </script>
+
+<!-- قسم حساب تيك توك -->
+<section class="tiktok-section" dir="rtl">
+  <div class="tiktok-card">
+    <div class="tiktok-icon">♪</div>
+
+    <h2>تابع أثرنا على تيك توك</h2>
+
+    <p>
+      ساهم في نشر الخير، وكن جزءًا من الأثر الطيب.
+      لعل مقطعًا تنشره يكون سببًا في أجرٍ لا ينقطع.
+    </p>
+
+    <a
+      href="https://www.tiktok.com/@ul13"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="tiktok-button"
+    >
+      تابعنا على تيك توك
+      <span>↗</span>
+    </a>
+
+    <div class="tiktok-username">@ul13</div>
+  </div>
+</section>
+
+<style>
+  .tiktok-section {
+    padding: 35px 20px;
+    margin-top: 30px;
+    font-family: inherit;
+  }
+
+  .tiktok-card {
+    max-width: 650px;
+    margin: auto;
+    padding: 35px 24px;
+    text-align: center;
+    border: 1px solid #c9a420;
+    border-radius: 22px;
+    background: linear-gradient(145deg, #fff8e7, #ffffff);
+    box-shadow: 0 8px 25px rgba(46, 46, 46, 0.08);
+  }
+
+  .tiktok-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #2e2e2e;
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: bold;
+  }
+
+  .tiktok-card h2 {
+    color: #2e2e2e;
+    margin-bottom: 12px;
+    font-size: 25px;
+  }
+
+  .tiktok-card p {
+    color: #666;
+    line-height: 1.9;
+    margin: 0 auto 22px;
+    max-width: 460px;
+  }
+
+  .tiktok-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 26px;
+    border-radius: 30px;
+    background: #2e2e2e;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+
+  .tiktok-button:hover {
+    background: #c9a420;
+    color: #2e2e2e;
+    transform: translateY(-3px);
+  }
+
+  .tiktok-username {
+    margin-top: 18px;
+    color: #9b7a0b;
+    font-size: 14px;
+    direction: ltr;
+  }
+
+  @media (max-width: 480px) {
+    .tiktok-card {
+      padding: 28px 18px;
+    }
+
+    .tiktok-card h2 {
+      font-size: 21px;
+    }
+  }
+</style>
 </body>
 </html>
